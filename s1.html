@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Vida</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url('https://i.pinimg.com/originals/59/94/b5/5994b5a21eadaf45cef834aba2c7e262.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            color: beige;
+        }
+
+        header, footer {
+            background-color: black;
+            color: forestgreen;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .poem {
+            text-align: center;
+            max-width: 600px;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: forestgreen;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        footer {
+            font-size: 0.9em;
+        }
+
+        button {
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        .slideshow-container {
+            width: 90%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .slideshow-image {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .poem {
+                max-width: 90%;
+            }
+
+            button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>El Universo Se Detiene Cuando Estoy Contigo</h1>
+    </header>
+    <div class="container">
+        <div class="slideshow-container">
+            <img class="slideshow-image" src="https://cdn.dribbble.com/users/1814300/screenshots/5989814/media/3c9a4ac7e5e3711c7ed544310f524d43.gif" alt="Slideshow Image">
+        </div>
+        <div class="poem">
+            <h1>El Universo Se Detiene Cuando Estoy Contigo</h1>
+            <p>
+                <span class="highlight">A veces me pregunto</span> si las estrellas envidian tu luz, porque cada vez que estás cerca, el mundo entero parece brillar un poco más.
+                Eres esa mezcla perfecta de magia y realidad, ese suspiro que no sabía que necesitaba hasta que llegaste a mi vida.
+            </p>
+            <p>
+                No hay palabra, ni canción, ni poema que pueda describir lo que siento cuando sonríes. Es como si el tiempo se detuviera,
+                como si el universo entero conspirara para regalarme ese momento contigo.
+            </p>
+            <p>
+                No sé si lo sabes, pero contigo todo tiene más sentido, más color y más vida. Si el amor se pudiera pintar,
+                llevaría los matices de tus ojos, la calidez de tu risa y la intensidad de tu presencia.
+            </p>
+            <p>
+                Hoy no quiero decirte nada más que esto: <span class="highlight">eres especial, única,</span> y no puedo evitar soñarte en cada rincón de mi mundo.
+                Te atreves a ser la razón por la que mi corazón nunca deje de latir así
+            </p>
+        </div>
+    </div>
+    <button onclick="window.location.href='index.html'">Regresar</button> 
+    <footer>
+        @ Alicia. Derechos reservados a <div id="honel">Jhonel Lozano</div>.
+    </footer>
+
+    <script>
+        const images = [
+            'https://cdn.dribbble.com/users/1814300/screenshots/5989814/media/3c9a4ac7e5e3711c7ed544310f524d43.gif',
+            'alicia4.jpg',
+            'https://i.pinimg.com/originals/17/3c/5a/173c5a32e701b84866d29c5f8da14a44.gif',
+            'alicia5.jpg',
+            'https://usagif.com/wp-content/uploads/gif-heart-22.gif',
+            'alicia1.jpg'
+        ];
+        let currentImageIndex = 0;
+        const slideshowImage = document.querySelector('.slideshow-image');
+
+        function preloadImages(imageArray) {
+            imageArray.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        function changeImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            slideshowImage.src = images[currentImageIndex];
+        }
+
+        preloadImages(images);
+        setInterval(changeImage, 2000); // Cambia de imagen cada 2 segundos
+    </script>
+</body>
+</html>

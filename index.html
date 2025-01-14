@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALICIA VERA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://i.pinimg.com/originals/6c/bd/66/6cbd66a0593e5498f9564f9d92074ef1.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #ffffff;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            color: #ff1493;
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .content {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 300px 1fr 300px;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .slideshow {
+            max-width: 300px;
+        }
+
+        .slideshow img {
+            width: 100%;
+            border: 5px solid #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .frases {
+            margin-top: 50px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: rgba(192, 110, 110, 0.8);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        button {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #3200bd;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .slideshow {
+                margin: 0 auto;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Un Lugar Solo para Ti❤️🤍</h1>
+    </header>
+
+    <div class="content">
+        <div class="slideshow">
+            <img src="https://placekitten.com/300/300" alt="Imagen 1" id="left-slideshow-image">
+        </div>
+
+        <div class="frases">
+            <h1>Donde los Sueños Empiezan</h1>
+            <p>Hay algo mágico en ti que no puedo dejar de admirar. Es como si llevaras un universo entero dentro de ti, lleno de sueños, luces y energía que iluminan todo a tu alrededor.</p>
+            <p>A veces me pregunto si sabes lo especial que eres, porque cada vez que te veo, me recuerdas que hay belleza en los pequeños momentos, en una sonrisa, en una mirada, en una risa que llega hasta el alma.</p>
+            <p>Eres inspiración en su forma más pura, y aunque quizás no lo notes, cada día haces que el mundo sea un lugar más brillante.</p>
+            <p>Solo quiero que sepas que alguien, en silencio, encuentra en ti una razón para creer en la magia de la vida. Porque sí, esa magia eres tú.❤️❤️😔</p>
+            <p>Querida Alicia, haz clic <a href="https://youtu.be/kWvGywUWLio" target="_blank"></p>AQUÍ /01/❤️🤍⚡</a></p>
+            <p><a href="https://youtu.be/FPfncq80xnw" target="_blank">AQUÍ /02/❤️🤍⚡</a> </p>Y un recuerdo es más que un instante del pasado, es un fragmento de eternidad que
+             vive para siempre en el alma!</p>
+        </div>
+
+        <div class="slideshow">
+            <img src="https://cdn.dribbble.com/users/1814300/screenshots/5989814/media/3c9a4ac7e5e3711c7ed544310f524d43.gif" alt="Imagen 1" id="right-slideshow-image">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="window.location.href='http://localhost/nancy/s1.html'">Sorpresa 1</button>
+        <button onclick="window.location.href='s2.html'">Sorpresa 2</button>
+        <button onclick="window.location.href='s3.html'">Descubre la Sorpresa</button>
+    </div>
+    <footer>
+        <p>&copy; 2025 ALICIA. Todos los derechos reservados.SON DE # jhonel lozano </p>
+    </footer>
+
+    <script>
+        const leftImages = [
+            'https://cdn.dribbble.com/users/1814300/screenshots/5989814/media/3c9a4ac7e5e3711c7ed544310f524d43.gif',
+            'alicia4.jpg',
+            'https://i.pinimg.com/originals/17/3c/5a/173c5a32e701b84866d29c5f8da14a44.gif',
+            'alicia5.jpg',
+            'https://usagif.com/wp-content/uploads/gif-heart-22.gif',
+            'alicia1.jpg'
+        ];
+        const rightImages = [
+            'https://cdn.dribbble.com/users/1814300/screenshots/5989814/media/3c9a4ac7e5e3711c7ed544310f524d43.gif',
+            'alicia1.jpg',
+            'https://i.pinimg.com/originals/17/3c/5a/173c5a32e701b84866d29c5f8da14a44.gif',
+            'alicia2.jpg',
+            'https://usagif.com/wp-content/uploads/gif-heart-22.gif',
+            'alicia3.jpg'
+        ];
+
+        let leftCurrentIndex = 0;
+        let rightCurrentIndex = 0;
+
+        const leftSlideshowImage = document.getElementById('left-slideshow-image');
+        const rightSlideshowImage = document.getElementById('right-slideshow-image');
+
+        function preloadImages(imageArray) {
+            imageArray.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        function startLeftSlideshow() {
+            leftSlideshowImage.src = leftImages[leftCurrentIndex];
+            setInterval(() => {
+                leftCurrentIndex = (leftCurrentIndex + 1) % leftImages.length;
+                leftSlideshowImage.src = leftImages[leftCurrentIndex];
+            }, 2000);
+        }
+
+        function startRightSlideshow() {
+            rightSlideshowImage.src = rightImages[rightCurrentIndex];
+            setInterval(() => {
+                rightCurrentIndex = (rightCurrentIndex + 1) % rightImages.length;
+                rightSlideshowImage.src = rightImages[rightCurrentIndex];
+            }, 2000);
+        }
+
+        preloadImages(leftImages);
+        preloadImages(rightImages);
+        startLeftSlideshow();
+        startRightSlideshow();
+    </script>
+</body>
+</html>
